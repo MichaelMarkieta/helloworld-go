@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["build", "-t", "gcr.io/$PROJECT_ID/helloworld-go.$BRANCH_NAME:latest", "-t", "gcr.io/$PROJECT_ID/helloworld-go.$BRANCH_NAME:$COMMIT_SHA" "-f", "Dockerfile", "."]
+  args: ["build", "-t", "gcr.io/$PROJECT_ID/helloworld-go.$BRANCH_NAME:latest", "-t", "gcr.io/$PROJECT_ID/helloworld-go.$BRANCH_NAME:$COMMIT_SHA", "-f", "Dockerfile", "."]
 images:
 - 'gcr.io/$PROJECT_ID/helloworld-go.$BRANCH_NAME:latest'
 - 'gcr.io/$PROJECT_ID/helloworld-go.$BRANCH_NAME:$COMMIT_SHA'
